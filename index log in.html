@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" lang="en
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log in</title>
+    <link rel="stylesheet" href="main%20log%20in.css"/>
+</head>
+    <body> 
+        <style>
+            body {
+                background-image: url(https://netstorage-tuko.akamaized.net/images/0fgjhs4oqmb7p87ku.jpg?imwidth=1080);
+            }
+            .textboxdiv input.error {
+                background-color: #fb9e9e;
+            }
+
+        </style>
+        <form id="form"action="/action_page.php">
+         <h1 class="h1"type="text">Welcome to our log in page.</h1>
+            <div class="textboxdiv">
+            <input type="text"id="username" placeholder="Enter username">
+            </div>
+            <div class="textboxdiv">
+            <input type="password"id="password"placeholder="Enter password">
+            </div>
+            <div class="passwordbox">
+            <a href="password">password</a>
+            </div>
+            <input class="login"type="submit" value="Log in">
+            <div class="createaccount">
+            Need to create an account?</br>
+            </div>
+            <div class="signup">
+            <a href="signup.html">Sign up</a>
+            </div>
+            <script>
+                document.getElementById('form').addEventListener('submit', function(event) {
+                var username = document.getElementById('username');
+                var password = document.getElementById('password');
+                var valid = true;
+
+                if (!username.value) {
+                username.classList.add('error');
+                valid = false;
+                } else {
+                username.classList.remove('error');
+                }
+
+               if (!password.value) {
+                password.classList.add('error');
+                valid = false;
+               } else {
+                password.classList.remove('error');
+               }
+
+               if (!valid) {
+                event.preventDefault();
+            }
+        });
+            </script>
+        </form>
+    </body> 
+</html>

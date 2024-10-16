@@ -1,0 +1,59 @@
+{   
+    font-style:"Bahnschrift"
+    box type border-box
+}
+body {
+    background-size: cover;
+    text-align: center;
+    justify-content: center; 
+    display: flex;
+    max-height: 50px;
+    background-repeat: no-repeat;
+    position: relative;
+    
+}
+form{
+    align-items: center;
+    justify-content: center;
+    width:300px;
+    background-color:rgb(4, 143, 143);
+    padding : 80px;
+    border-radius: 0px;
+    height:300px;
+    margin-top: 80px;
+    padding-top: 20px;
+    position: absolute;
+    
+}
+h1{
+    color: rgb(75, 51, 147);
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 50px;
+    margin-top: 30px;
+    font-style:oblique;
+}
+.text{
+    margin-top: 20px;
+    color: rgb(215, 248, 247);
+    text-decoration: none;
+    cursor: pointer;
+    text-align: center;
+    margin-bottom: 40px;
+}
+button {
+    background-color:  rgb(75, 51, 147);
+    color: white;
+    padding: 10px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 2px;
+    margin-top: 20px;
+    opacity: 0.9;
+  }
+  button:hover {
+    background-color:  rgb(75, 51, 147);
+    color: black;
+  }

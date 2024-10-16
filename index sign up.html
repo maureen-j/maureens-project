@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en" lang="en
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up</title>
+    <link rel="stylesheet" href="main%20sign%20up.css"/>
+    <script src="script%20sign%20up.js"></script>
+</head>
+    <body>
+        <form id="form"action="/action_page.php">
+        <h1 class="h1"type="text">Sign up</h1>
+        <div class="tab">Log in info:
+          <label for="items">Choose an item:</label>
+          <select id="items">
+              <option value="item1">Item 1</option>
+              <option value="item2">Item 2</option>
+              <option value="item3">Item 3</option>
+              <option value="item4">Item 4</option>
+          </select>
+          <p><input placeholder="Create username" oninput="this.className = ''"></p>
+          <p><input placeholder="Create password" oninput="this.className = ''"></p>
+        </div>
+        
+        <div class="tab">Contact info:
+          <p><input placeholder="Enter your email address" oninput="this.className = ''"></p>
+          <p><input placeholder="Enter your phone number" oninput="this.className = ''"></p>
+          
+        </div>
+        
+        <div class="tab">Academic Info:
+          <p><input placeholder="Enter your university's name" oninput="this.className = ''"></p>
+          <p><input placeholder="Enter your course of study" oninput="this.className = ''"></p>
+          <p><input placeholder="Enter your year of study"type="number" oninput="this.className = ''"></p>
+          <p><input placeholder="Enter your current semester"type="number" oninput="this.className = ''"></p>
+        </div>
+        <style>
+          button {
+            background-color: #2c4bc9;
+            color: white;
+            padding: 10px 20px;
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+          }
+          button:hover {
+            background-color: #2c4bc9;
+            color: black;
+          }
+        </style>
+        
+            <div style="overflow:auto;">
+              <div style="float:left;">
+                <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
+              </div>
+              <div style="float:right;">
+                <button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
+              </div>
+            </div>
+            <div style="margin-top:40px;text-align: center;">
+              <span class="step"></span>
+              <span class="step"></span>
+              <span class="step"></span>
+            </div>
+          </form>
+          <script>
+            var currentTab=0;
+            showTab(currentTab);
+            function showTab(n) {
+              var x=document.getElementsByClassName("tab");
+              x[n].style.display="block";
+              if (n==0) {
+                document.getElementById("prevBtn").style.display="none";
+              } else {
+                document.getElementById("prevBtn").style.display="inline";
+              }
+              if (n==x.length-1) {
+                document.getElementById("nextBtn").innerHTML="Submit";
+              } else {
+                document.getElementById("nextBtn").innerHTML="Next";
+              }
+              fixStepIndicator(n)
+            }
+            function nextPrev(n) {
+              var x=document.getElementsByClassName("tab");
+              if (n==1 &&!validateForm()) return false;
+              x[currentTab].style.display="none";
+              currentTab=currentTab+n;
+              if (currentTab>=x.length) {
+                document.getElementById("form").submit();
+                return false;
+              }
+              showTab(currentTab);
+            }
+            function validateForm() {
+              var x, y, i, valid=true;
+              x=document.getElementsByClassName("tab");
+              y=x[currentTab].getElementsByTagName("input");
+              for (i=0; i<y.length; i++) {
+                if (y[i].value=="") {
+                  y[i].className += " invalid";
+                  valid=false;
+                }
+              }
+              if (valid) {
+                document.getElementsByClassName("step")[currentTab].className += " finish";
+              }
+              return valid;
+            }
+            function fixStepIndicator(n) {
+              var i, x=document.getElementsByClassName("step");
+              for (i=0; i<x.length; i++) {
+                x[i].className=x[i].className.replace(" active","");
+              }
+              x[n].className+=" active";
+            }
+          </script>
+    </body> 
+</html>
