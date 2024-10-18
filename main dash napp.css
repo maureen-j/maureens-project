@@ -1,0 +1,98 @@
+*{
+    font-style:"Bahnschrift"
+    box-sizing border-box;
+}
+body {
+    background-size: cover;
+    text-align: center;
+    justify-content: center; 
+    display: flex;
+    max-height: 50px;
+    position: relative;
+    background-color:rgb(4, 143, 143);
+}
+form {
+    align-items: center;
+    justify-content: justify;
+    width:350px;
+    background-color:white;
+    padding : 40px;
+    border-radius: 10px;
+    height:670px;
+    margin:100px auto;
+    padding-top: 40px;
+    position: absolute auto;
+    display: block;
+    margin-top: 7.5px;
+}
+h1 {
+    color:  rgb(3, 3, 133);
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+input {
+    padding: 10px;
+    width: 70%;
+    font-size: 14px;
+    border: 1px solid #070303;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba( 0, 0, 0, 3);
+    margin-bottom: 20px;
+}
+  
+input.invalid {
+    background-color: #fb9e9e;
+}
+  
+.tab {
+    display:none;
+    font-size: 15px;
+    color:black;
+    justify-content: justify;
+    text-align: start;
+}
+.heading {
+    margin-top: 20px;
+    color:black;
+    font-size: 20px;
+}
+.textarea{
+    width: 70%;
+    font-size: 14px;
+    border: 1px solid #070303;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba( 0, 0, 0, 3);
+    margin-bottom: 20px;
+    resize: none;
+}
+.step {
+    height: 20px;
+    width: 20px;
+    margin-top: 0px;
+    background-color:#0e03b4 ;
+    border: none;
+    border-radius: 50%;
+    display: inline-block;
+    opacity: 0.2;
+}
+.step.active {
+    opacity: 1;
+}
+.step.finish {
+    background-color: #463df1 ;
+}
+.logout{
+    background-color:  #2c4bc9;
+    color: white;
+    padding: 10px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 50%;
+    border-radius: 2px;
+    margin-top: 20px;
+}
+.logout:hover {
+    background-color:#2c4bc9;
+    color: black;
+}

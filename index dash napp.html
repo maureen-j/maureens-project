@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en" lang="en
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard for new applicants</title>
+    <link rel="stylesheet" href="main%20dash%20napp.css"/>
+</head>
+    <body>
+        <form id="form"action="/action_page.php">
+        <h1 class="h1"type="text">Apply Today!</h1>
+        
+        <div class="tab"><strong>Front page:</strong>
+            <ol class="instructions">
+            <li>Please proceed to apply for the student exchange program.</li>
+            <li>You can log out at any point you wish to recommendedly if you don't meet the requirements.</li>
+            <li>Any blanks will be considered an invalid application and will therefore be terminated</li>
+            <li>Some questions may require you to give answers in a number or float format given the example of G.P.A</li>
+            <li>Giving wrong information will lead to application failure</li>
+            <li>Success of the application will be based on how the administrator views your answers and if requirements are met</li>
+            <li>After submitting your application form, you will receive an email or a message notifying you of success or failure</li>
+            <li>Along with the successful application message, you will be given more information on;</li>
+                <ul>
+                    <li>What is required in the preparation of the program</li>
+                    <li>Rules/regulations and guidelines</li>
+                </ul>
+            <li>Please check your email within 24hrs of submission and incase of any enquiries email us on <strong>online support@zetch.ac.ke</strong></li>
+        </ol>
+        </div>
+        
+        <div class="tab"><strong>Requirements form:</strong>
+          <p>You are required to have the following;</p>
+          <ul>
+            <li>A valid student ID card.</li>
+            <li>A valid student diploma/degree.</li>
+            <li>A valid G.P.A certificate.</li>
+            <li>Must be a student in Zetech,MIT or Harvard university. </li>
+            <li>Must be an ICT student.</li>
+            <li>Must be a final year student doing research or projects.</li>
+            <li>Must be financially stable.</li>
+            <li>Must be a well performing student with a G.P.A of 4.0 and above.</li>
+            <li>Must be a well disciplined.</li>
+        </ul>
+          <p>Please note that without this requirements or in of any contradictions your application will regarded as a failure.</p>
+        </div>
+        
+        <div class="tab"><strong>Application form 1:</strong>
+                <h1 class="heading">Basic info:</h1>
+                <label for="fname">Full name:</label><br>
+                <input type="text" id="fname" name="fname"><br>
+                <label for="uni">Your university's name:</label><br>
+                <input type="text" id="uni" name="uni"><br>
+                <label for="adm">Admission number:</label><br>
+                <input type="text" id="adm" name="adm"><br>
+                <label for="phone no">Phone number:</label><br>
+                <input type="number" id="phone no" name="phone no"><br>
+                <label for="email">Email address:</label><br>
+                <input type="text" id="email" name="email"><br>
+            </div>
+    
+        <div class="tab"><strong>Application form 2:</strong>
+                   <h1 class="heading">Academic info:</h1>
+                    <label for="course">Course of study:</label><br>
+                    <input type="text" id="course" name="course"><br>
+                    <label for="year">Year of study:</label><br>
+                    <input type="number" id="year" name="year"><br>
+                    <label for="sem">Semester:</label><br>
+                    <input type="number" id="sem" name="sem"><br>
+                    <label for="grade">Average grade in G.P.A format:</label><br>
+                    <input type="number" id="grade" name="grade"><br>
+                    <label for="question">Have you faced any displinary issues:</label></br>
+                    <input type="radio" id="yes" name="question" value="Yes">
+                    <label for="yes">Yes</label><br>
+                    <input type="radio" id="no" name="question" value="No">
+                    <label for="no">No</label><br>
+                </div>
+         <div class="tab"><strong>Application form 3:</strong>
+                       <h1 class="heading">Guardian/parent info:</h1>
+                       <label for="phone no">Phone number:</label><br>
+                       <input type="number" id="phone no" name="phone no"><br>
+                       <label for="email">Email address:</label><br>
+                       <input type="text" id="email" name="email"><br>
+                         <h1 class="heading">Additional info:</h1>
+                          <label for="textareas">Reason for applying:</label></br>
+                          <textarea id="textareas" name="textareas" rows="4" cols="40"></textarea></br>
+                          <label for="textareas">What do you look forward to gain from the program:</label></br>
+                          <textarea id="textareas" name="textareas" rows="4" cols="40"></textarea></br>
+                    </div>
+            <div class="tab"><strong>Application form 4:</strong></br>
+                          <label for="question">Have you been to another country:</label></br>
+                          <input type="radio" id="yes" name="question" value="Yes">
+                          <label for="yes">Yes</label><br>
+                          <input type="radio" id="no" name="question" value="No">
+                          <label for="no">No</label><br>
+                          <label for="textareas">What is your opinion on different cultures apart from yours:</label></br>
+                          <textarea id="textareas" name="textareas" rows="4" cols="40"></textarea></br>
+                          <label for="question">Apart from English can you speak in any other language:</label></br>
+                          <input type="radio" id="yes" name="question" value="Yes">
+                          <label for="yes">Yes</label><br>
+                          <input type="radio" id="no" name="question" value="No">
+                          <label for="no">No</label><br>
+                          <label for="textareas">Which languages can you speak:</label></br>
+                          <textarea id="textareas" name="textareas" rows="4" cols="40"></textarea></br>
+                          <label for="question">Do you have a relative or friend in USA,Cambridge:</label></br>
+                          <input type="radio" id="yes" name="question" value="Yes">
+                          <label for="yes">Yes</label><br>
+                          <input type="radio" id="no" name="question" value="No">
+                          <label for="no">No</label><br>
+                     </div>
+                <div class="tab"><strong>Application form 5:</strong></br>
+                          <label for="textareas">How do you plan your accomodation incase you get into the program:</label></br>
+                          <textarea id="textares" name="textareas" rows="4" cols="40"></textarea></br>
+                          <label for="text">Which University would you prefer to be posted to:</label><br>
+                          <input type="text" id="text" name="text"><br>
+                          <label for="textareas">Reason for your University of choice:</label></br>
+                          <textarea id="textares" name="textareas" rows="4" cols="40"></textarea></br>
+        
+        </div>
+        <style>
+          button {
+            background-color: #2c4bc9;
+            color: white;
+            padding: 10px 20px;
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+          }
+          button:hover {
+            background-color: #2c4bc9;
+            color: black;
+          }
+        </style>
+        
+            <div style="overflow:auto;">
+              <div style="float:left;">
+                <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
+              </div>
+              <div style="float:right;">
+                <button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
+              </div>
+            </div>
+            <div style="margin-top:40px;text-align: center;">
+              <span class="step"></span>
+              <span class="step"></span>
+              <span class="step"></span>
+              <span class="step"></span>
+              <span class="step"></span>
+              <span class="step"></span>
+              <span class="step"></span>
+            </div>
+            <input class="logout"type="submit" value="Log Out">
+          </form>
+          <script>
+            var currentTab=0;
+            showTab(currentTab);
+            function showTab(n) {
+              var x=document.getElementsByClassName("tab");
+              x[n].style.display="block";
+              if (n==0) {
+                document.getElementById("prevBtn").style.display="none";
+              } else {
+                document.getElementById("prevBtn").style.display="inline";
+              }
+              if (n==x.length-1) {
+                document.getElementById("nextBtn").innerHTML="Submit";
+              } else {
+                document.getElementById("nextBtn").innerHTML="Next";
+              }
+              fixStepIndicator(n)
+            }
+            function nextPrev(n) {
+              var x=document.getElementsByClassName("tab");
+              if (n==1 &&!validateForm()) return false;
+              x[currentTab].style.display="none";
+              currentTab=currentTab+n;
+              if (currentTab>=x.length) {
+                document.getElementById("form").submit();
+                return false;
+              }
+              showTab(currentTab);
+            }
+            function validateForm() {
+              var x, y, i, valid=true;
+              x=document.getElementsByClassName("tab");
+              y=x[currentTab].getElementsByTagName("input");
+              for (i=0; i<y.length; i++) {
+                if (y[i].value=="") {
+                  y[i].className += " invalid";
+                  valid=false;
+                }
+              }
+              if (valid) {
+                document.getElementsByClassName("step")[currentTab].className += " finish";
+              }
+              return valid;
+            }
+            function fixStepIndicator(n) {
+              var i, x=document.getElementsByClassName("step");
+              for (i=0; i<x.length; i++) {
+                x[i].className=x[i].className.replace(" active","");
+              }
+              x[n].className+=" active";
+            }
+          </script>
+          <script type="text/javascript">
+            alert("Welcome to the student exchange program portal");
+        </script>
+    </body> 
+</html>
