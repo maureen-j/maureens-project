@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fees Structure</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #333;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>Fees Structure</h1>
+    <input type="text" id="search" placeholder="Search">
+    <button id="edit">Edit</button>
+    <button id="add">Add</button>
+    <table>
+        <thead>
+            <tr>
+                <th>University Name</th>
+                <th>Course</th>
+                <th>Year</th>
+                <th>Semester</th>
+                <th>Option</th>
+            </tr>
+        </thead>
+        <tbody id="table-body">
+            <tr>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <script>
+        document.getElementById('add').addEventListener('click', function() {
+            var tableBody= document.getElementById('table-body');
+            var newRow = document.createElement('tr');
+
+            for (var i = 0; i < 5; i++) {
+                var newCell = document.createElement('td');
+                var input = document.createElement('input');
+                input.type = 'text';
+                newCell.appendChild(input);
+                newRow.appendChild(newCell);
+            }
+
+           tableBody .appendChild(newRow);
+        });
+    </script>
+</body>
+</html>

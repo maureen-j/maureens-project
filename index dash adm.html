@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      display: inline-flex;
+      height: 100vh;
+      width: 80% fit-content;
+      align-items: left;
+      justify-content: center;
+      background-color:rgb(127, 180, 180);
+    }
+    .sidebar {
+      width: 200px;
+      background-color: #2c3e50;
+      color: white;
+      padding: 20px;
+      
+    }
+    .sidebar h2 {
+      color: #fff;
+      margin-bottom: 40px;
+    }
+    .sidebar ul {
+      list-style: none;
+      padding: 0;
+    }
+    .sidebar ul li {
+      margin-bottom: 20px;
+    }
+    .sidebar ul li a {
+      text-decoration: none;
+      color: white;
+      padding: 10px;
+      display: block;
+      border-radius: 5px;
+    }
+    .sidebar ul li a.active, .sidebar ul li a:hover {
+      background-color: #34495e;
+    }
+    .main-content {
+      flex: 1;
+      background-color: #ecf0f1;
+      padding: 30px;
+    }
+    .content-section {
+        display: none;
+    }
+    .content-section.active {
+        display: block;
+    }
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 30px;
+    }
+    .h2 {
+      font-size: 24px;
+    }
+    .search-box input {
+      padding: 10px;
+      border: 1px solid #e3d1d1;
+      border-radius: 5px;
+      width: 300px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    table th, table td {
+      text-align: left;
+      padding: 15px;
+      border-bottom: 1px solid #ddd;
+    }
+    table th {
+      background-color: #2c3e50;
+      color: white;
+      position: sticky;
+    }
+    table tr:hover {
+      background-color: #f5f5f5;
+    }
+    .header-controls {
+      margin-bottom: 20px;
+      margin-top: 20px;
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+    .header-controls input[type="submit"] {
+      padding: 5px 10px;
+      color: white;
+      background-color: #03600e;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .header-controls input[type="text"] {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      background-color: #90aec2;
+      color: white;
+    }
+    .logout{
+        padding: 5px 10px;
+        color: white;
+        background-color: #03600e;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <h2>Dashboard</h2>
+    <ul>
+      <li><a href="#"id="partner-universities-link"class='active'>Partner Universities</a></li>
+      <li><a href="#"id="fees-structure-link">Fees Structure</a></li>
+      <li><a href="#"id="news-link">News and Announcements</a></li>
+      <li><a href="#"id="students-info-link">Students Info</a></li>
+      <li><a href="#"id="new-applicants-link">New Applicants</a></li>
+      <input class="logout"type="submit" value="Log Out">
+    </ul>
+  </div>
+
+  <!-- Main Content -->
+  <div class="main-content">
+    <div id="partner-universities-section" class="content-section active">
+      <h2>Partner universities</h2>
+      <div class="header-controls">
+        <div class="edit"id="edit">
+            <input class="buttons" type="submit" value="Edit">
+        </div>
+        <div class="add"id="add">
+            <input class="buttons" type="submit" value="Add">
+        </div>
+    </div>
+      <table>
+        <tbody>
+            <tr>
+            <td>Zetech University</td>
+            </tr>
+            <tr>
+            <td>MIT University</td>
+            </tr>
+            <tr>
+            <td>Harvard University</td>
+            </tr>
+        </tbody>
+      </table>
+    </div>
+  
+  <div id="fees-structure-section" class="content-section">
+    <h1>Fees Structure</h1>
+    <div class="header-controls">
+        <div class="search-box"id="search">
+            <input class="search-box" type="text" placeholder="Search">
+        </div>
+        <button id="add">Add</button>
+    </div>
+   
+    <table>
+      <thead>
+        <tr>
+          <th>University Name</th>
+          <th>Course</th>
+          <th>Year</th>
+          <th>Semester</th>
+        </tr>
+      </thead>
+      <tbody id="tbody">
+        <tr>
+          <td><input type="text"></td>
+          <td><input type="text"></td>
+          <td><input type="number"></td>
+          <td><input type="number"></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
+<div id="news-section" class="content-section">
+      <h2>News and Announcements</h2>
+      <div class="header-controls">
+        <div class="edit"id="edit">
+            <input class="buttons" type="submit" value="Edit">
+        </div>
+        <div class="add"id="add">
+            <input class="buttons" type="submit" value="Add">
+        </div>
+    </div>
+      <table>
+        <tbody>
+            <tr>
+            <td>To all Computer Science Students posted in Zetech University...</td>
+            </tr>
+        </tbody>
+      </table>
+    </div>
+
+
+<div id="students-info-section" class="content-section">
+    <h1>Students info</h1>
+    <div class="header-controls">
+        <div class="search-box"id="search">
+            <input class="search-box" type="text" placeholder="Search">
+        </div>
+        <div class="edit"id="edit">
+            <input class="buttons" type="submit" value="Edit">
+        </div>
+        <div class="add"id="add">
+            <input class="buttons" type="submit" value="Add">
+        </div>
+    </div>
+  
+    <table>
+      <thead>
+        <tr>
+          <th>Student Name</th>
+          <th>Student ID</th>
+          <th>Phone Number</th>
+          <th>Email Address</th>
+          <th>Guardians/Parents Phone Number</th>
+          <th>Guardians/Parents Email Address</th>
+          <th>Home University Name</th>
+          <th>Posted University Name</th>
+          <th>Course</th>
+          <th>Year</th>
+          <th>Semester</th>
+          <th>Fee Amount</th>
+          <th>Fee Paid</th>
+          <th>Fee Balance</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>John Doe</td>
+          <td>123456</td>
+          <td>123-456-7890</td>
+          <td>john@zetech.com</td>
+          <td>123-456-7890</td>
+          <td>lyle@zetech.com</td>
+          <td>Zetech</td>
+          <td>Harvard</td>
+          <td>Computer Science</td>
+          <td>2</td>
+          <td>1</td>
+          <td>$500</td>
+          <td>$300</td>
+          <td>$200</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+<div id="new-applicants-section" class="content-section">
+    <h1>New Applicants</h1>
+    <div class="header-controls">
+        <div class="search-box"id="search">
+            <input class="search-box" type="text" placeholder="Search">
+        </div>
+        <div class="edit"id="edit">
+            <input class="buttons" type="submit" value="Edit">
+        </div>
+        <div class="add"id="add">
+            <input class="buttons" type="submit" value="Add">
+        </div>
+    </div>
+    
+        <table>
+          <thead>
+                <tr>
+                    <th>Applicants Name</th>
+                    <th>Applicants ID</th>
+                    <th>Application Date</th>
+                    <th>Phone Number</th>
+                    <th>Email Address</th>
+                    <th>Guardians/Parents Phone Number</th>
+                    <th>Guardians/Parents Email Address</th>
+                    <th>Home University Name</th>
+                    <th>Course</th>
+                    <th>Year</th>
+                    <th>Semester</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+                <td>Jane Doe</td>
+                <td>01</td>
+                <td>123-456-7890</td>
+                <td>janedoe@zetech.com</td>
+                <td>123-456-7890</td>
+                <td>lyle@zetech.com</td>
+                <td>Zetech</td>
+                <td>Computer Science</td>
+                <td>2</td>
+                <td>1</td>
+            </tr>
+          </tbody>
+        </table>
+    </div>
+<div>
+
+  
+<script>
+    document.getElementById('partner-universities-link').addEventListener('click', function() {
+      setActiveSection('partner-universities-section');
+      setActiveLink(this);
+    });
+
+    document.getElementById('fees-structure-link').addEventListener('click', function() {
+      setActiveSection('fees-structure-section');
+      setActiveLink(this);
+    });
+    document.getElementById('news-link').addEventListener('click', function() {
+      setActiveSection('news-section');
+      setActiveLink(this);
+    });
+    document.getElementById('students-info-link').addEventListener('click', function() {
+      setActiveSection('students-info-section');
+      setActiveLink(this);
+    });
+    document.getElementById('new-applicants-link').addEventListener('click', function() {
+      setActiveSection('new-applicants-section');
+      setActiveLink(this);
+    });
+
+    function setActiveSection(sectionId) {
+      var sections = document.querySelectorAll('.content-section');
+      sections.forEach(function(section) {
+        section.classList.remove('active');
+      });
+      document.getElementById(sectionId).classList.add('active');
+    }
+
+    function setActiveLink(activeLink) {
+      var links = document.querySelectorAll('.sidebar ul li a');
+      links.forEach(function(link) {
+        link.classList.remove('active');
+      });
+      activeLink.classList.add('active');
+    }
+  </script>
+  <script type="text/javascript">
+        document.querySelector('.add input[type="submit"]').addEventListener('click', function(event) {
+          event.preventDefault();
+            var tableBody = document.getElementById('tbody');
+            var newRow = document.createElement('tr');
+
+            for (var i = 0; i < 4; i++) {
+                var newCell = document.createElement('td');
+                var input = document.createElement('input');
+                input.type = 'text';
+                input.type='number';
+                newCell.appendChild(input);
+                newRow.appendChild(newCell);
+            }
+
+            tableBody.appendChild(newRow);
+        });
+  </script>
+  
+</body>
+</html>

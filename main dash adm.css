@@ -1,0 +1,148 @@
+*{
+    font-style:"Bahnschrift"
+    box type border-box
+    
+}
+body {
+    min-height: 100vh;
+    background-color:rgb(219, 247, 247);
+    text-align: center;
+    justify-content: center; 
+    display:flex ;
+    margin-top: 60px;
+    background-size: cover;
+}
+form{
+    align-items: normal;
+    justify-content: center;
+    width:300px;
+    background-color:rgb(4, 143, 143);
+    padding : 80px;
+    border-radius: 10px;
+    height:580px;
+    padding-top: 50px;
+    box-shadow:0 0 30px rgba( 0, 0, 0, 3);
+}
+h1{
+    color: rgb(3, 3, 133);
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    font-style: oblique;
+}
+.text{
+    margin-top: 20px;
+    margin-bottom: 30px;
+    color:black;
+    text-decoration: none;
+}
+.partners{
+    align-items: normal;
+    justify-content: center;
+    margin-bottom: 20px;
+    border-color: rgb(245, 152, 152);
+    border-width: 10px;
+    border-radius: 10px;
+    box-shadow:0 0 10px rgba( 0, 0, 0, 3);
+    background-color: rgb(178, 212, 244);
+    width:80%;
+}
+.fees{
+    align-items: normal;
+    justify-content: center;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    border-color: rgb(245, 152, 152);
+    border-width: 10px;
+    border-radius: 10px;
+    box-shadow:0 0 10px rgba( 0, 0, 0, 3);
+    background-color: rgb(178, 212, 244);
+    width:80%;
+}
+.news{
+    align-items: normal;
+    justify-content: center;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    border-color: rgb(245, 152, 152);
+    border-width: 10px;
+    border-radius: 10px;
+    box-shadow:0 0 10px rgba( 0, 0, 0, 3);
+    background-color: rgb(178, 212, 244);
+    width: 80%;
+}
+.student{
+    align-items: normal;
+    justify-content: center;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    border-color: rgb(245, 152, 152);
+    border-width: 10px;
+    border-radius: 10px;
+    box-shadow:0 0 10px rgba( 0, 0, 0, 3);
+    background-color: rgb(178, 212, 244);
+    width:80%;
+}
+.applicant{
+    align-items: normal;
+    justify-content: center;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    border-color: rgb(245, 152, 152);
+    border-width: 10px;
+    border-radius: 10px;
+    box-shadow:0 0 10px rgba( 0, 0, 0, 3);
+    background-color: rgb(178, 212, 244);
+    width:80%;
+}
+.emails{
+    align-items: normal;
+    justify-content: center;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    border-color: rgb(245, 152, 152);
+    border-width: 10px;
+    border-radius: 10px;
+    box-shadow:0 0 10px rgba( 0, 0, 0, 3);
+    background-color: rgb(178, 212, 244);
+    width:80%;
+}
+.partners:hover{
+    background-color: rgb(3, 3, 133);
+    color: white;
+}
+.fees:hover{
+    background-color: rgb(3, 3, 133);
+    color: white;
+}
+.news:hover{
+    background-color: rgb(3, 3, 133);
+    color: white;
+}
+.student:hover{
+    background-color: rgb(3, 3, 133);
+    color: white;
+}
+.applicant:hover{
+    background-color: rgb(3, 3, 133);
+    color: white;
+}
+.emails:hover{
+    background-color: rgb(3, 3, 133);
+    color: white;
+}
+.logout{
+    margin-top: 20px;
+    background-color: rgb(3, 3, 133);
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    align-items: center;
+    opacity: 0.6;
+}
+.logout:hover{
+    opacity: 1;
+}
